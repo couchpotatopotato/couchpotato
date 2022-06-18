@@ -1,0 +1,77 @@
+@import './variables.scss';
+@import '../../node_modules/bulma/bulma.sass';
+
+.mr-7 {
+  margin-right: 6rem;
+}
+
+h1,
+p {
+  color: white;
+}
+
+p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 64px;
+  line-height: 70px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 96px;
+    line-height: 104px;
+  }
+}
+
+button {
+  background: transparent;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  margin: 0.25rem 0;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+  transition: all 0.15s ease 0s;
+  color: white;
+
+  &:hover {
+    background-color: #000;
+    cursor: pointer;
+  }
+}
+
+a {
+  height: 2.25rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &.large {
+    font-size: 24px;
+    font-weight: 600;
+    height: 3rem;
+    width: 10rem;
+    display: block;
+    padding-top: 0.4rem;
+    text-align: center;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.white {
+    background-color: #fff;
+    color: #000;
+  }
+}
