@@ -1,0 +1,14 @@
+@import '../../../styles/main.scss';
+
+.section-heading {
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+
+  &.inc-margin-top {
+    margin-top: 6rem;
+  }
+
+  &__subtitle {
+    margin-top: 0.3rem;
+  }
+}

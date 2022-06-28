@@ -5,6 +5,92 @@
   margin-right: 6rem;
 }
 
+.is-72 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+
+  @include from($tablet) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.is-64 {
+  font-size: 2rem;
+
+  @include from($tablet) {
+    font-size: 2.5rem;
+  }
+}
+
+.is-36 {
+  font-size: 1.4rem;
+
+  @include from($tablet) {
+    font-size: 1.6rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.8rem;
+  }
+}
+
+.is-32 {
+  font-size: 1.25rem;
+
+  @include from($desktop) {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+.is-28 {
+  font-size: 1.1rem;
+
+  @include from($tablet) {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+}
+
+.is-24 {
+  font-size: 1rem;
+
+  @include from($tablet) {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+}
+
+.is-20 {
+  font-size: 0.9rem;
+
+  @include from($tablet) {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+
+  @include from($desktop) {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+
 h1,
 p {
   color: white;
@@ -17,10 +103,10 @@ p {
 
 h1 {
   font-weight: bolder;
-  font-size: 64px;
-  line-height: 70px;
+  font-size: 60px;
+  line-height: 60px;
 
-  @media screen and (min-width: $desktop) {
+  @include from($desktop) {
     font-size: 96px;
     line-height: 104px;
   }
@@ -40,7 +126,7 @@ button {
   color: white;
 
   &:hover {
-    background-color: #000;
+    background-color: $navigation-light;
     cursor: pointer;
   }
 }
@@ -57,13 +143,20 @@ a {
   align-items: center;
 
   &.large {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     height: 3rem;
     width: 10rem;
+    padding: 0.6rem 1rem 0 1rem;
     display: block;
-    padding-top: 0.4rem;
     text-align: center;
+
+    @include from($desktop) {
+      font-size: 24px;
+      height: 4rem;
+      width: 14rem;
+      padding: 0.9rem 1rem 0 1rem;
+    }
   }
 
   &:hover {

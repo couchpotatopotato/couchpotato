@@ -1,17 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import { Home } from 'routes/home';
-
-import './App.scss';
+import Main from './Main';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <Suspense fallback>
+      <Router>
+        <Main />
+      </Router>
+    </Suspense>
   );
 };
 
