@@ -2,12 +2,12 @@ import React from 'react';
 
 import lightyear from 'assets/lightyear.jpg';
 import { FeaturedMovie } from 'components/featuredMovie';
-import { Navbar } from 'components/navbar';
+import { SectionHeader } from 'components/section/sectionHeader';
+import { SectionWrapper } from 'components/section/sectionWrapper';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <FeaturedMovie
         title="Rise of the Planet of the Apes"
         cast={['Chris Evans', 'Keke Palmer']}
@@ -16,6 +16,9 @@ const Home = () => {
         genre="Adventure/Family"
         releaseDate="June 17, 2022"
       />
+      <SectionWrapper isWide>
+        <SectionHeader title="Now Showing" increasedMarginTop />
+      </SectionWrapper>
     </div>
   );
 };

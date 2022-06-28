@@ -20,8 +20,10 @@ const FeaturedMovie = ({
   releaseDate,
 }: FeaturedMovieProps) => {
   return (
-    <div className="background">
-      <img alt="lightyear" src={image} className="image" />
+    <div className="featuredMovie">
+      <div className="background">
+        <img alt="lightyear" src={image} className="image" />
+      </div>
       <div className="info">
         <div>
           <p className="mb-3">With</p>
@@ -39,7 +41,7 @@ const FeaturedMovie = ({
         </div>
         <h1 className="movieTitle mb-5">{title}</h1>
         <div className="is-flex is-flex-direction-row is-align-items-center">
-          <a href="/" className="large mr-7">
+          <a href="/" className="large mr-6">
             Book Now
           </a>
           <p className="has-text-grey-lighter">{releaseDate}</p>
